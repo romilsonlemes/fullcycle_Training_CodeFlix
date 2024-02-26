@@ -1,0 +1,15 @@
+import unittest # std - Ja vem Instalada com o python
+
+from category import Category
+
+
+class TestCategory(unittest.TestCase):
+    def test_name_is_required(self):
+        with self.assertRaisesRegex(TypeError, "Missing 1 required positional argument: 'name'"):
+            Category()
+        
+        
+if __name__ == "__main__":
+    unittest.main()
+    
+
